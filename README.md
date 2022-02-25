@@ -1,6 +1,6 @@
 # new_app
 
-A new Flutter project.
+week 1: Learn about simple layout in flutter
 
 ## Getting Started
 
