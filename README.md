@@ -2,6 +2,11 @@
 
 week 1: Learn about simple layout in flutter
 
+
+<img width="412" alt="Ảnh chụp Màn hình 2022-02-25 lúc 15 20 15" src="https://user-images.githubusercontent.com/62633274/155680473-d001f1bb-c7ff-4fcf-95dd-d056eb7904aa.png">
+
+
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
