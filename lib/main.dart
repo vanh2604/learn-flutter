@@ -33,22 +33,23 @@ class ProductBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(2),
-      height: 120,
+      height: 150,
       child: Card(
           child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Image.asset("assets/appimages/" + image, width: 100, height: 100),
+          Image.asset("assets/appimages/" + image, width: 150, height: 150),
           Expanded(
               child: Container(
-            padding: const EdgeInsets.all(2),
+            padding: const EdgeInsets.all(5),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   name,
                   style: const TextStyle(
-                      fontSize: 20, fontWeight: FontWeight.bold),
+                      fontSize: 15, fontWeight: FontWeight.bold),
                 ),
                 Text(
                   description,
@@ -57,13 +58,93 @@ class ProductBox extends StatelessWidget {
                 Text(
                   "price ${price.toString()}",
                   style: const TextStyle(
-                      fontSize: 20, fontWeight: FontWeight.bold),
-                )
+                      fontSize: 15, fontWeight: FontWeight.bold),
+                ),
+                const RatingBox(),
               ],
             ),
           ))
         ],
       )),
+    );
+  }
+}
+
+class RatingBox extends StatefulWidget {
+  const RatingBox({Key? key}) : super(key: key);
+
+  @override
+  _RatingBoxState createState() => _RatingBoxState();
+}
+
+class _RatingBoxState extends State<RatingBox> {
+  int _rating = 0;
+  void _setRatingAsOne() {
+    setState(() {
+      _rating = 1;
+    });
+  }
+
+  void _setRatingAsTwo() {
+    setState(() {
+      _rating = 2;
+    });
+  }
+
+  void _setRatingAsThree() {
+    setState(() {
+      _rating = 3;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    double _size = 20;
+
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Container(
+          padding: const EdgeInsets.all(2),
+          child: IconButton(
+            icon: (_rating >= 1
+                ? Icon(Icons.star, size: _size)
+                : Icon(Icons.star_border, size: _size)),
+            onPressed: () {
+              _setRatingAsOne();
+            },
+            iconSize: _size,
+            color: Colors.yellow[500],
+          ),
+        ),
+        Container(
+          padding: const EdgeInsets.all(2),
+          child: IconButton(
+            icon: (_rating >= 2
+                ? Icon(Icons.star, size: _size)
+                : Icon(Icons.star_border, size: _size)),
+            onPressed: () {
+              _setRatingAsTwo();
+            },
+            iconSize: _size,
+            color: Colors.yellow[500],
+          ),
+        ),
+        Container(
+          padding: const EdgeInsets.all(2),
+          child: IconButton(
+            icon: (_rating >= 3
+                ? Icon(Icons.star, size: _size)
+                : Icon(Icons.star_border, size: _size)),
+            onPressed: () {
+              _setRatingAsThree();
+            },
+            iconSize: _size,
+            color: Colors.yellow[500],
+          ),
+        )
+      ],
     );
   }
 }
