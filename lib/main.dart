@@ -2,17 +2,68 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   // This widget is the root of your application.
   const MyApp({Key? key}) : super(key: key);
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
+  late Animation<double> animation;
+  late AnimationController controller;
+
+  @override
+  void initState() {
+    super.initState();
+    controller = AnimationController(
+      duration: const Duration(seconds: 10),
+      vsync: this,
+    );
+    animation = Tween<double>(begin: 0.0, end: 1.0).animate(controller);
+    controller.forward();
+  }
+
   @override
   Widget build(BuildContext context) {
+    controller.forward();
     return MaterialApp(
       title: 'Hello World Demo Application',
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: const MyHomePage(title: 'Home page'),
+      home: MyHomePage(
+        title: 'Home page',
+        animation: animation,
+      ),
+    );
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
+}
+
+class MyAnimateWidget extends StatelessWidget {
+  const MyAnimateWidget(
+      {Key? key, required this.child, required this.animation})
+      : super(key: key);
+  final Widget child;
+  final Animation<double> animation;
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: AnimatedBuilder(
+        animation: animation,
+        builder: (context, child) => Opacity(
+          opacity: animation.value,
+          child: child,
+        ),
+        child: child,
+      ),
     );
   }
 }
@@ -172,39 +223,44 @@ class _RatingBoxState extends State<RatingBox> {
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+class MyHomePage extends StatelessWidget {
+  MyHomePage({Key? key, required this.animation, required this.title})
+      : super(key: key);
   final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int count = 0;
+  final Animation<double> animation;
   final items = Product.getProducts();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(widget.title),
+          title: Text(title),
         ),
         body: ListView.builder(
           itemCount: items.length,
           itemBuilder: (context, index) {
-            return GestureDetector(
-              child: ProductBox(item: items[index]),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => ProductPage(
-                      item: items[index],
+            if (index == 0) {
+              return MyAnimateWidget(
+                child: ProductBox(item: items[index]),
+                animation: animation,
+              );
+            } else if (index == 1) {
+              return FadeTransition(
+                  opacity: animation, child: ProductBox(item: items[index]));
+            } else {
+              return GestureDetector(
+                child: ProductBox(item: items[index]),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ProductPage(
+                        item: items[index],
+                      ),
                     ),
-                  ),
-                );
-              },
-            );
+                  );
+                },
+              );
+            }
           },
         ));
   }
@@ -221,7 +277,7 @@ class ProductPage extends StatelessWidget {
       ),
       body: Center(
         child: Container(
-          padding: const EdgeInsets.all(0),
+          padding: const EdgeInsets.all(2),
           child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
