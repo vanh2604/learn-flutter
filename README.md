@@ -1,14 +1,20 @@
 # new_app
 
-week 1:
+Week 1:
 - Learn about simple layout in flutter
 
 
 <img width="412" alt="Ảnh chụp Màn hình 2022-02-25 lúc 15 20 15" src="https://user-images.githubusercontent.com/62633274/155680473-d001f1bb-c7ff-4fcf-95dd-d056eb7904aa.png">
 
+Week 2:
 - Stateful widget with rating star for each product
 
 <img width="414" alt="Ảnh chụp Màn hình 2022-02-26 lúc 14 58 37" src="https://user-images.githubusercontent.com/62633274/155835609-cdd32159-0702-4184-8b33-240c510094ed.png">
+
+- Routing and Navigator with ProductDetail page
+
+<img width="335" alt="Ảnh chụp Màn hình 2022-03-04 lúc 12 48 37" src="https://user-images.githubusercontent.com/62633274/156707492-79d066d2-288c-4838-8544-a81d412bb2b0.png">
+
 
 
 
