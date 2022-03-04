@@ -1,4 +1,4 @@
-# new_app
+## Small App
 
 Week 1:
 - Learn about simple layout in flutter
@@ -15,6 +15,9 @@ Week 2:
 
 <img width="335" alt="Ảnh chụp Màn hình 2022-03-04 lúc 12 48 37" src="https://user-images.githubusercontent.com/62633274/156707492-79d066d2-288c-4838-8544-a81d412bb2b0.png">
 
+- Faded Animation
+
+<img width="331" alt="Ảnh chụp Màn hình 2022-03-04 lúc 14 07 47" src="https://user-images.githubusercontent.com/62633274/156716409-e18d9e8a-7354-4140-837a-536db06068dc.png">
 
 
 
