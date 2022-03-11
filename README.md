@@ -33,16 +33,24 @@ Week 3:
 
 - List expense
 
-<img width="331" alt="Ảnh chụp Màn hình 2022-03-11 lúc 14 41 49" src="https://user-images.githubusercontent.com/62633274/157824608-76617d93-8555-4a60-a319-5b3c3dccb119.png">
+<img width="408" alt="Ảnh chụp Màn hình 2022-03-11 lúc 14 52 22" src="https://user-images.githubusercontent.com/62633274/157825467-61a79fba-342c-4558-843c-224dab447ad1.png">
+
 
 
 - View Expense Detail
 
-<img width="331" alt="Ảnh chụp Màn hình 2022-03-11 lúc 14 42 07" src="https://user-images.githubusercontent.com/62633274/157824702-ca75ef36-7220-47bb-b8d6-8ec47bf38578.png">
+<img width="408" alt="Ảnh chụp Màn hình 2022-03-11 lúc 14 52 31" src="https://user-images.githubusercontent.com/62633274/157825485-bdfdf716-4066-4e56-b816-e1358adbff51.png">
+
 
 - Add expense
 
-<img width="331" alt="Ảnh chụp Màn hình 2022-03-11 lúc 14 42 18" src="https://user-images.githubusercontent.com/62633274/157824752-bb9b7f12-821f-4ff3-8360-96153d0d70d1.png">
+<img width="408" alt="Ảnh chụp Màn hình 2022-03-11 lúc 14 52 37" src="https://user-images.githubusercontent.com/62633274/157825656-e999bf00-7006-4273-931e-fd9a4d034cfb.png">
+
+
+- Delete expense
+
+<img width="408" alt="Ảnh chụp Màn hình 2022-03-11 lúc 14 53 43" src="https://user-images.githubusercontent.com/62633274/157825618-dd9edafb-9830-40a3-a3ac-f787c8ba3937.png">
+
 
 
 
