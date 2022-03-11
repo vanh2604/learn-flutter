@@ -19,6 +19,9 @@ Week 2:
 
 <img width="331" alt="Ảnh chụp Màn hình 2022-03-04 lúc 14 07 47" src="https://user-images.githubusercontent.com/62633274/156716409-e18d9e8a-7354-4140-837a-536db06068dc.png">
 
+- fetch dynamic data from api with json-server
+
+<img width="331" alt="Ảnh chụp Màn hình 2022-03-11 lúc 10 26 23" src="https://user-images.githubusercontent.com/62633274/157796611-4c520a52-e856-4581-b420-02e3f954e8fb.png">
 
 
 
