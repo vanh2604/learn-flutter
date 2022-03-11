@@ -23,6 +23,12 @@ Week 2:
 
 <img width="331" alt="Ảnh chụp Màn hình 2022-03-11 lúc 10 26 23" src="https://user-images.githubusercontent.com/62633274/157796611-4c520a52-e856-4581-b420-02e3f954e8fb.png">
 
+Week 3:
+- Get data from database
+
+<img width="331" alt="Ảnh chụp Màn hình 2022-03-11 lúc 11 34 10" src="https://user-images.githubusercontent.com/62633274/157802933-0420390c-48cb-428c-97ef-4c3f3860e2ae.png">
+
+
 
 
 
