@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import "product.dart";
 
 List<Product> parseProducts(String responseBody) {
   final parsed = json.decode(responseBody).cast<Map<String, dynamic>>();
@@ -81,23 +82,6 @@ class MyAnimateWidget extends StatelessWidget {
         ),
         child: child,
       ),
-    );
-  }
-}
-
-class Product {
-  final String name;
-  final String description;
-  final int price;
-  final String image;
-  Product(this.name, this.description, this.price, this.image);
-
-  factory Product.fromMap(Map<String, dynamic> json) {
-    return Product(
-      json['name'],
-      json['description'],
-      json['price'],
-      json['image'],
     );
   }
 }

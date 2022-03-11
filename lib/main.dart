@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
 import 'ProductApp.dart';
+import 'Database.dart';
 
-void main() => runApp(MyApp(products: fetchProducts()));
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(MyApp(products: SQLiteDbProvider.db.getAllProducts()));
+}
