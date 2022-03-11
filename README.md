@@ -1,4 +1,4 @@
-## Small App
+## Product App
 
 Week 1:
 - Learn about simple layout in flutter
@@ -27,6 +27,22 @@ Week 3:
 - Get data from database
 
 <img width="331" alt="Ảnh chụp Màn hình 2022-03-11 lúc 11 34 10" src="https://user-images.githubusercontent.com/62633274/157802933-0420390c-48cb-428c-97ef-4c3f3860e2ae.png">
+
+
+## Expense Tracker App
+
+- List expense
+
+<img width="331" alt="Ảnh chụp Màn hình 2022-03-11 lúc 14 41 49" src="https://user-images.githubusercontent.com/62633274/157824608-76617d93-8555-4a60-a319-5b3c3dccb119.png">
+
+
+- View Expense Detail
+
+<img width="331" alt="Ảnh chụp Màn hình 2022-03-11 lúc 14 42 07" src="https://user-images.githubusercontent.com/62633274/157824702-ca75ef36-7220-47bb-b8d6-8ec47bf38578.png">
+
+- Add expense
+
+<img width="331" alt="Ảnh chụp Màn hình 2022-03-11 lúc 14 42 18" src="https://user-images.githubusercontent.com/62633274/157824752-bb9b7f12-821f-4ff3-8360-96153d0d70d1.png">
 
 
 
